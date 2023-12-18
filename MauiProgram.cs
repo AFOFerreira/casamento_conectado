@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using Sharpnado.Tabs;
 
 namespace casamento_conectado
@@ -17,7 +18,8 @@ namespace casamento_conectado
                     fonts.AddFont("FeelingLovely.ttf", "FeelingLovely");
                     fonts.AddFont("FASolid-900.otf", "FASolid");
                 })
-                .UseSharpnadoTabs(loggerEnable: false); ;
+                .UseSharpnadoTabs(loggerEnable: false)
+                  .UseMauiCommunityToolkit();
 
             return builder.Build();
         }
