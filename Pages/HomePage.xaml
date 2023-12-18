@@ -41,22 +41,22 @@
 				Margin="25,0"
 				Animate="False"
 				SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
-				<tabs:DelayedView
+				<tabs:LazyView
 					x:TypeArguments="contentTabs:EventsTab"
 					AccentColor="{StaticResource Primary}"
 					Animate="True"
 					UseActivityIndicator="True" />
-				<tabs:DelayedView
+				<tabs:LazyView
 					x:TypeArguments="contentTabs:ConvidadosTab"
 					AccentColor="{StaticResource Primary}"
 					Animate="True"
 					UseActivityIndicator="True" />
-				<tabs:DelayedView
+				<tabs:LazyView
 					x:TypeArguments="contentTabs:FotosTab "
 					AccentColor="{StaticResource Primary}"
 					Animate="True"
 					UseActivityIndicator="True" />
-				<tabs:DelayedView
+				<tabs:LazyView
 					x:TypeArguments="contentTabs:AvaliacaoTab"
 					AccentColor="{StaticResource Primary}"
 					Animate="True"
@@ -79,6 +79,7 @@
 					Offset="0,20" />
 			</Border.Shadow>
 			<tabs:TabHostView
+				x:Name="tabhost"
 				Margin="0"
 				BackgroundColor="{StaticResource White}"
 				HorizontalOptions="FillAndExpand"

@@ -1,3 +1,4 @@
+using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 
 namespace casamento_conectado.Pages.Tabs;
@@ -129,6 +130,9 @@ public partial class EventsTab : ContentView
     {
         InitializeComponent();
         listaCerimonia.ItemsSource = new ObservableCollection<Evento>(EventosCerimonia);
+        listaCerimonia.ScrollTo(null, animate: false);
+
         listaFesta.ItemsSource = new ObservableCollection<Evento>(EventosFesta);
+        listaFesta.ScrollTo(null, animate: false);
     }
 }
