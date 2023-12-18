@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="casamento_conectado.Pages.HomePage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:tabs="http://sharpnado.com"
+	BackgroundColor="{StaticResource BackgroundPages}">
+	<Grid RowDefinitions="*,auto">
+		<Grid RowDefinitions="10*, 10*,80*">
+			<Border
+				Grid.Row="0"
+				Grid.RowSpan="2"
+				Margin="0"
+				BackgroundColor="{StaticResource Primary}"
+				HorizontalOptions="FillAndExpand"
+				Stroke="{StaticResource Primary}"
+				StrokeShape="RoundRectangle 0,0,0,25"
+				StrokeThickness="0"
+				VerticalOptions="FillAndExpand">
+				<Label
+					Margin="0,10,0,0"
+					FontFamily="FeelingLovely"
+					FontSize="28"
+					HorizontalOptions="Center"
+					Text="Maria e Pedro"
+					TextColor="{StaticResource White}"
+					VerticalOptions="Start">
+					<Label.Shadow>
+						<Shadow
+							Opacity="0.8"
+							Radius="10"
+							Offset="0,10" />
+					</Label.Shadow>
+				</Label>
+			</Border>
+			<Grid
+				Grid.Row="1"
+				Grid.RowSpan="2"
+				Margin="25,0"
+				BackgroundColor="Red" />
+		</Grid>
+		<!--  tab bar  -->
+		<Border
+			Grid.Row="1"
+			Margin="0"
+			Padding="0"
+			BackgroundColor="{StaticResource White}"
+			HeightRequest="60"
+			StrokeShape="RoundRectangle 25,25,0,0"
+			StrokeThickness="1">
+			<Border.Shadow>
+				<Shadow
+					Opacity="0.8"
+					Radius="40"
+					Offset="0,20" />
+			</Border.Shadow>
+			<tabs:TabHostView
+				Margin="0"
+				BackgroundColor="{StaticResource White}"
+				HorizontalOptions="FillAndExpand"
+				SegmentedOutlineColor="Transparent"
+				TabType="Fixed"
+				VerticalOptions="FillAndExpand">
+				<tabs:TabHostView.Tabs>
+					<tabs:BottomTabItem
+						IconSize="25"
+						Label="Eventos"
+						LabelSize="12"
+						SelectedTabColor="{StaticResource Primary}"
+						UnselectedIconColor="{StaticResource UnSelectedColor}"
+						UnselectedLabelColor="{StaticResource UnSelectedColor}">
+						<tabs:BottomTabItem.IconImageSource>
+							<FontImageSource FontFamily="FASolid" Glyph="&#xf79f;" />
+						</tabs:BottomTabItem.IconImageSource>
+					</tabs:BottomTabItem>
+					<tabs:BottomTabItem
+						IconSize="25"
+						Label="Convidados"
+						LabelSize="12"
+						SelectedTabColor="{StaticResource Primary}"
+						UnselectedIconColor="{StaticResource UnSelectedColor}"
+						UnselectedLabelColor="{StaticResource UnSelectedColor}">
+						<tabs:BottomTabItem.IconImageSource>
+							<FontImageSource FontFamily="FASolid" Glyph="&#xe533;" />
+						</tabs:BottomTabItem.IconImageSource>
+					</tabs:BottomTabItem>
+
+					<tabs:BottomTabItem
+						IconSize="25"
+						Label="Fotos"
+						LabelSize="12"
+						SelectedTabColor="{StaticResource Primary}"
+						UnselectedIconColor="{StaticResource UnSelectedColor}"
+						UnselectedLabelColor="{StaticResource UnSelectedColor}">
+						<tabs:BottomTabItem.IconImageSource>
+							<FontImageSource
+								FontFamily="FASolid"
+								Glyph="&#xf302;"
+								Color="{StaticResource Primary}" />
+						</tabs:BottomTabItem.IconImageSource>
+					</tabs:BottomTabItem>
+					<tabs:BottomTabItem
+						IconSize="25"
+						Label="Avaliação"
+						LabelSize="12"
+						SelectedTabColor="{StaticResource Primary}"
+						UnselectedIconColor="{StaticResource UnSelectedColor}"
+						UnselectedLabelColor="{StaticResource UnSelectedColor}">
+						<tabs:BottomTabItem.IconImageSource>
+							<FontImageSource
+								FontFamily="FASolid"
+								Glyph="&#xf005;"
+								Color="{StaticResource Primary}" />
+						</tabs:BottomTabItem.IconImageSource>
+					</tabs:BottomTabItem>
+				</tabs:TabHostView.Tabs>
+			</tabs:TabHostView>
+		</Border>
+	</Grid>
+
+</ContentPage>
