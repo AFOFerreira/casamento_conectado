@@ -1,3 +1,6 @@
+using casamento_conectado.popups;
+using CommunityToolkit.Maui.Views;
+
 namespace casamento_conectado.Pages;
 
 public partial class HomePage : ContentPage
@@ -6,5 +9,6 @@ public partial class HomePage : ContentPage
 	{
 		InitializeComponent();
 		tabhost.SelectedIndex = 0;
-	}
+    }
+
 }

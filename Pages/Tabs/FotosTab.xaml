@@ -49,7 +49,7 @@
 									Source="{Binding Imagem}"
 									VerticalOptions="FillAndExpand" />
 								<Grid Grid.Row="1" HeightRequest="50">
-									<BoxView BackgroundColor="Black" Opacity="0.3" />
+									<BoxView BackgroundColor="Black" Opacity="0.4" />
 
 									<Label
 										Margin="10,0"
@@ -73,6 +73,7 @@
 			<Button
 				Grid.Row="1"
 				Margin="0,0,10,10"
+				Clicked="AbrirPopup"
 				CornerRadius="20"
 				HeightRequest="40"
 				HorizontalOptions="End"

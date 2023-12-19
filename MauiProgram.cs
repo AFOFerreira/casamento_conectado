@@ -1,7 +1,5 @@
 ﻿using casamento_conectado.Repositories;
 using CommunityToolkit.Maui;
-using Microsoft.Extensions.Logging;
-using Sharpnado.CollectionView;
 using Sharpnado.Tabs;
 
 namespace casamento_conectado
@@ -28,5 +26,7 @@ namespace casamento_conectado
 
             return builder.Build();
         }
+
+
     }
 }

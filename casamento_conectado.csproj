@@ -112,6 +112,9 @@
 	  <MauiXaml Update="Pages\Tabs\EventsTab.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="popups\FotoPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Widgets\CardQuantidade.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
