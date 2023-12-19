@@ -11,6 +11,7 @@ namespace casamento_conectado
             ConvidadosRepository.CriarLista();
             EventsRepository.CriarLista();
             FotosRepository.CriarLista();
+            AvaliacaoRepository.CriarLista();
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()

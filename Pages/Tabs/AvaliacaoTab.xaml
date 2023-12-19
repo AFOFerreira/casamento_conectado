@@ -3,12 +3,191 @@
 	x:Class="casamento_conectado.Pages.Tabs.AvaliacaoTab"
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:widgets="clr-namespace:casamento_conectado.Widgets"
+	Margin="0,10,0,0"
 	HorizontalOptions="FillAndExpand"
 	VerticalOptions="FillAndExpand">
-	<VerticalStackLayout>
-		<Label
+	<Grid RowDefinitions="Auto,*,50" RowSpacing="10">
+		<Frame
+			Padding="0"
+			CornerRadius="10"
+			HeightRequest="100">
+			<Grid ColumnDefinitions="30*, 70*" ColumnSpacing="0">
+				<Image
+					Grid.Column="0"
+					Aspect="Center"
+					VerticalOptions="FillAndExpand">
+
+					<Image.Source>
+						<FontImageSource
+							FontFamily="FASolid"
+							Glyph="&#xf587;"
+							Size="50"
+							Color="Gold" />
+					</Image.Source>
+				</Image>
+
+				<Grid
+					Grid.Column="1"
+					Margin="0,10"
+					RowDefinitions="Auto,Auto">
+					<Label
+						FontAttributes="Italic,Bold"
+						FontSize="18"
+						HorizontalOptions="Start"
+						Text="Avalie nosso casamento"
+						TextColor="{StaticResource Black}"
+						VerticalOptions="Start" />
+					<Label
+						Grid.Row="1"
+						FontAttributes="Italic"
+						FontSize="12"
+						HorizontalOptions="Start"
+						Text="Avaliar esta festa é reconhecer o esforço dedicado para tornar este dia extraordinário, com cada detalhe pensado para proporcionar uma experiência inesquecível."
+						TextColor="{StaticResource Black}"
+						VerticalOptions="End" />
+				</Grid>
+			</Grid>
+		</Frame>
+		<ScrollView Grid.Row="1">
+			<Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+				<Grid Grid.Row="0" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="Como estavam as Bebidas?"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaBebidas"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+				<Grid Grid.Row="1" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="Avalie os pratos principais:"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaPratosPrincipais"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+				<Grid Grid.Row="2" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="E as sobremesas?"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaSobremesas"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+				<Grid Grid.Row="3" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="Fale um pouco sobre os acompanhamentos?"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaAcompanhamento"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+				<Grid Grid.Row="4" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="E os aperitivos?"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaAperitivos"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+				<Grid Grid.Row="5" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="Curtiu a musica?"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaMusica"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+				<Grid Grid.Row="6" RowDefinitions="Auto,Auto">
+					<Label
+						Grid.Row="0"
+						FontAttributes="Bold,Italic"
+						FontSize="15"
+						Text="E sobre o local?"
+						TextColor="{StaticResource Tertiary}" />
+					<CollectionView
+						x:Name="listaLocal"
+						Grid.Row="1"
+						IsEnabled="False">
+						<CollectionView.ItemTemplate>
+							<DataTemplate>
+								<widgets:CardAvaliacao />
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</Grid>
+			</Grid>
+		</ScrollView>
+		<Button
+			Grid.Row="2"
+			Margin="0,10"
+			CornerRadius="15"
+			HeightRequest="40"
 			HorizontalOptions="Center"
-			Text="Welcome to .NET MAUI!"
-			VerticalOptions="Center" />
-	</VerticalStackLayout>
+			Text="Avaliar"
+			VerticalOptions="Center"
+			WidthRequest="100" />
+	</Grid>
 </ContentView>
