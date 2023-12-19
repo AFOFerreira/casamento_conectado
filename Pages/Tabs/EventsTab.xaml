@@ -45,8 +45,8 @@
 			</Grid>
 		</Frame>
 		<ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never">
-			<VerticalStackLayout>
-				<Grid RowDefinitions="Auto,Auto,Auto">
+			<Grid RowDefinitions="Auto,Auto">
+				<Grid Grid.Row="0" RowDefinitions="Auto,Auto,Auto">
 					<Label
 						Grid.Row="0"
 						Padding="5"
@@ -120,7 +120,7 @@
 						</CollectionView.ItemTemplate>
 					</CollectionView>
 				</Grid>
-				<Grid RowDefinitions="Auto,Auto,Auto">
+				<Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto">
 					<Label
 						Grid.Row="0"
 						Padding="5"
@@ -193,7 +193,7 @@
 						</CollectionView.ItemTemplate>
 					</CollectionView>
 				</Grid>
-			</VerticalStackLayout>
+			</Grid>
 		</ScrollView>
 	</Grid>
 </ContentView>
