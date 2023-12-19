@@ -41,25 +41,25 @@
 				Margin="25,0"
 				Animate="False"
 				SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
-				<tabs:LazyView
+				<tabs:DelayedView
 					x:TypeArguments="contentTabs:EventsTab"
 					AccentColor="{StaticResource Primary}"
-					Animate="True"
+					Animate="False"
 					UseActivityIndicator="True" />
-				<tabs:LazyView
+				<tabs:DelayedView
 					x:TypeArguments="contentTabs:ConvidadosTab"
 					AccentColor="{StaticResource Primary}"
-					Animate="True"
+					Animate="False"
 					UseActivityIndicator="True" />
-				<tabs:LazyView
+				<tabs:DelayedView
 					x:TypeArguments="contentTabs:FotosTab "
 					AccentColor="{StaticResource Primary}"
-					Animate="True"
+					Animate="False"
 					UseActivityIndicator="True" />
-				<tabs:LazyView
+				<tabs:DelayedView
 					x:TypeArguments="contentTabs:AvaliacaoTab"
 					AccentColor="{StaticResource Primary}"
-					Animate="True"
+					Animate="False"
 					UseActivityIndicator="True" />
 			</tabs:ViewSwitcher>
 		</Grid>

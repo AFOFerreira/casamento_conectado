@@ -1,5 +1,7 @@
-﻿using CommunityToolkit.Maui;
+﻿using casamento_conectado.Repositories;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using Sharpnado.CollectionView;
 using Sharpnado.Tabs;
 
 namespace casamento_conectado
@@ -8,6 +10,8 @@ namespace casamento_conectado
     {
         public static MauiApp CreateMauiApp()
         {
+            ConvidadosRepository.CriarLista();
+            EventsRepository.CriarLista();
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
