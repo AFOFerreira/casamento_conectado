@@ -71,6 +71,16 @@
 	  <None Remove="Resources\Images\entrada_noivo.svg" />
 	  <None Remove="Resources\Images\festa.svg" />
 	  <None Remove="Resources\Images\fim_casamento.svg" />
+	  <None Remove="Resources\Images\foto01.svg" />
+	  <None Remove="Resources\Images\foto02.svg" />
+	  <None Remove="Resources\Images\foto03.svg" />
+	  <None Remove="Resources\Images\foto04.svg" />
+	  <None Remove="Resources\Images\foto05.svg" />
+	  <None Remove="Resources\Images\foto06.svg" />
+	  <None Remove="Resources\Images\foto07.svg" />
+	  <None Remove="Resources\Images\foto08.svg" />
+	  <None Remove="Resources\Images\foto09.svg" />
+	  <None Remove="Resources\Images\foto10.svg" />
 	  <None Remove="Resources\Images\janta.svg" />
 	  <None Remove="Resources\Images\madrinhas_padrinhos.svg" />
 	  <None Remove="Resources\Images\noiva.svg" />
