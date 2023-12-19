@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AndroidX.AppCompat.View.Menu;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -18,7 +19,7 @@ namespace casamento_conectado.Models
         public string? Nome { get; private set; }
         public TipoConvidado TipoConvidado { get; private set; }
         public bool Presente { get; private set; }
-        public Color? Color
+        public Color? CorStatus
         {
             get
             {
@@ -30,6 +31,51 @@ namespace casamento_conectado.Models
                 {
                     return TipoConvidado == TipoConvidado.VIP ? Colors.Orange : Colors.Green;
                 }
+            }
+        }
+
+        public FontImageSource IconeTipoConvidado
+        {
+            get
+            {
+           
+                return TipoConvidado == TipoConvidado.VIP ?
+                    new FontImageSource()
+                    {
+                        FontFamily = "FASolid",
+                        Glyph = "\uf57b;",
+                        Color = Colors.Orange
+                    }
+                    :
+                    new FontImageSource()
+                    {
+                        FontFamily = "FASolid",
+                        Glyph = "\uf500;",
+                        Color = Colors.BlueViolet
+                    }
+                    ;
+            }
+        }
+        public FontImageSource IconePresenca
+        {
+            get
+            {
+
+                return Presente ?
+                    new FontImageSource()
+                    {
+                        FontFamily = "FASolid",
+                        Glyph = "\uf00c;",
+                        Color = Colors.Green
+                    }
+                    :
+                    new FontImageSource()
+                    {
+                        FontFamily = "FASolid",
+                        Glyph = "\uf00d;",
+                        Color = Colors.Red
+                    }
+                    ;
             }
         }
 

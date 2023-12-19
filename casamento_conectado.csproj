@@ -102,6 +102,9 @@
 	  <MauiXaml Update="Pages\Tabs\EventsTab.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Widgets\CardQuantidade.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptioncasamento_conectadoHideInfoBar="True" /></VisualStudio></ProjectExtensions>

@@ -10,6 +10,6 @@ public partial class ConvidadosTab : ContentView
     public ConvidadosTab()
     {
         InitializeComponent();
-        listaConvidados.ItemsSource =new ObservableCollection<Convidado> (ConvidadosRepository.Convidados?? new List<Convidado>());
+        listaConvidados.ItemsSource =new ObservableCollection<Convidado> (ConvidadosRepository.Convidados?.OrderByDescending(x=> x.Presente).ToList()?? new List<Convidado>());
     }
 }
