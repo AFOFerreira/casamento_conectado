@@ -1,7 +1,6 @@
 using casamento_conectado.Models;
 using casamento_conectado.Repositories;
 using System.Collections.ObjectModel;
-using static Android.Icu.Text.CaseMap;
 
 namespace casamento_conectado.Pages.Tabs;
 
